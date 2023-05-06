@@ -1,0 +1,8 @@
+*.dll
+*.pdb
+*.cache
+*.csproj.CopyComplete
+*.csproj.FileListAbsolute.txt
+TestResults/
+.vs/
+*.suo

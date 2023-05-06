@@ -1,0 +1,30 @@
+﻿<Window x:Class="MultiThreadingDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MultiThreadingDemo"
+        mc:Ignorable="d"
+        Title="Multithreading Demo" Height="450" Width="800">
+    <Grid>
+        <StackPanel x:Name="RootStackPanel" Orientation="Vertical" VerticalAlignment="Center">
+            <StackPanel x:Name="ReceiveStackPanel" Orientation="Horizontal" >
+                <Label Name="ReceivePort" Content="Receive Port" Margin="10,10,10,10" Width="80" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" VerticalContentAlignment="Center" />
+                <TextBox Name="ReceivePortTextBox" Padding="10" Margin="10,10,10,10" Width="100" Height="50" Background="LightGray" VerticalAlignment="Top" HorizontalAlignment="Left" IsReadOnly="True" />
+                <TextBox Name="ReceiveTextBox" Padding="10" Margin="10,10,10,10" Width="500" Height="50" Background="LightGray" VerticalAlignment="Top" HorizontalAlignment="Left" IsReadOnly="True"/>
+            </StackPanel>
+            <StackPanel x:Name="SendStackPanel" Orientation="Horizontal">
+                <Label Name="SendPortLabel" Content="Send Port" Margin="10,10,10,10" Width="80" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" VerticalContentAlignment="Center" />
+                <TextBox Name="SendPortTextBox" Padding="10" Margin="10,10,10,10" Width="100" Height="50" Background="Azure" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBox Name="SendMessageTextBox" Padding="10" Margin="10,10,10,10" Width="390" Height="50" Background="Azure" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <Button Name="SendMessageButton" Content="Send" Margin="10,10,10,10" Width="100" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" Click="SendMessageButtonClick"/>
+            </StackPanel>
+            <StackPanel x:Name="TotalCountStackPanel" Orientation="Horizontal">
+                <Label Name="TotalMessageCountLabel" Content="Total Message Count" Margin="10,10,10,10" Width="150" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" VerticalContentAlignment="Center" />
+                <TextBox Name="TotalMessageCountTextBox" Padding="10" Margin="10,10,10,10" Width="100" Height="50" Background="LightGreen" VerticalAlignment="Top" HorizontalAlignment="Left" Text="0" IsReadOnly="True" />
+                <Label Name="SummaryLabel" Content="Summary" Margin="10,10,10,10" Width="80" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" VerticalContentAlignment="Center" />
+                <TextBox Name="SummaryTextBox" Padding="10" Margin="10,10,10,10" Width="340" Height="50" Background="LightGreen" VerticalAlignment="Top" HorizontalAlignment="Left" IsReadOnly="True" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
